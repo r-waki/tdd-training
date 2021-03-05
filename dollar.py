@@ -1,9 +1,8 @@
 
 class Dollar:
-    def __init__ (self, multiplier) :
-        self.multiplier = multiplier
-        self.amount = 0
+    def __init__ (self, amount) :
+        self.amount = amount
 
-    def times(self, times) :
-        self.amount = times * self.multiplier 
+    def times(self, multiplier) :
+        self.amount *= multiplier 
     
