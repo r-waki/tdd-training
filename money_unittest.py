@@ -4,10 +4,8 @@ from dollar import Dollar
 class MoneyTest(unittest.TestCase) :
     def testMultiplication(self) :
         five = Dollar(5)
-        product = five.times(2)
-        self.assertEqual(product.amount, 10) 
-        product = five.times(3)
-        self.assertEqual(product.amount, 15)
+        self.assertEqual(Dollar(10).amount, five.times(2).amount) 
+        self.assertEqual(Dollar(15).amount, five.times(3).amount)
     
     def testEquality(self) :
         five = Dollar(5)
