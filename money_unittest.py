@@ -8,6 +8,11 @@ class MoneyTest(unittest.TestCase) :
         self.assertEqual(product.amount, 10) 
         product = five.times(3)
         self.assertEqual(product.amount, 15)
+    
+    def testEquality(self) :
+        five = Dollar(5)
+        self.assertTrue(five.equals(Dollar(5)))
+        self.assertFalse(five.equals(Dollar(6)))
 
 if __name__ == '__main__':
     unittest.main()
