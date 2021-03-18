@@ -16,7 +16,11 @@ class MoneyTest(unittest.TestCase) :
         five = Franc(5)
         self.assertEqual(Franc(10).amount, five.times(2).amount) 
         self.assertEqual(Franc(15).amount, five.times(3).amount)
- 
+    
+    def testFrancEquality(self) :
+        five = Franc(5)
+        self.assertTrue(five.equals(Franc(5)))
+        self.assertFalse(five.equals(Franc(4)))
 
 if __name__ == '__main__':
     unittest.main()
