@@ -1,23 +1,23 @@
 import unittest
-from dollar import Dollar, Franc
+from money import Money, Dollar, Franc
 
 class MoneyTest(unittest.TestCase) :
     def testMultiplication(self) :
-        five = Dollar(5)
-        self.assertEqual(Dollar(10).amount, five.times(2).amount) 
-        self.assertEqual(Dollar(15).amount, five.times(3).amount)
+        five = Money.dollar(5)
+        self.assertEqual(Money.dollar(10).amount, five.times(2).amount) 
+        self.assertEqual(Money.dollar(15).amount, five.times(3).amount)
     
     def testEquality(self) :
-        dollar_five = Dollar(5)
-        franc_five = Franc(5)
-        self.assertTrue(dollar_five == Dollar(5))
-        self.assertFalse(dollar_five == Dollar(6))
-        self.assertTrue(franc_five == Franc(5))
-        self.assertFalse(franc_five == Franc(4))   
+        dollar_five = Money.dollar(5)
+        franc_five = Money.franc(5)
+        self.assertTrue (dollar_five == Money.dollar(5))
+        self.assertFalse(dollar_five == Money.dollar(6))
+        self.assertTrue(franc_five == Money.franc(5))
+        self.assertFalse(franc_five == Money.franc(4))
         self.assertFalse(dollar_five == franc_five)
         
     def testFrancMultiplication(self) :
-        five = Franc(5)
+        five = Money.franc(5)
         self.assertEqual(Franc(10).amount, five.times(2).amount) 
         self.assertEqual(Franc(15).amount, five.times(3).amount)
     
