@@ -20,13 +20,13 @@ class Dollar(Money):
     def times(self, multiplier):
         return Money(self.amount * multiplier)
 
-#    def currency(self):
-#        return "USD"
+    def currency(self):
+        return "USD"
 
 
 class Franc(Money):
     def times(self, multiplier):
         return Money(self.amount * multiplier)
 
-#    def currency(self):
-#        return "CHF"
+    def currency(self):
+        return "CHF"
