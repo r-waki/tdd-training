@@ -1,4 +1,7 @@
-class Money:
+from abc import ABCMeta
+
+
+class Money(metaclass=ABCMeta):
     def __init__(self, amount):
         self.amount = amount
 
@@ -17,7 +20,13 @@ class Dollar(Money):
     def times(self, multiplier):
         return Money(self.amount * multiplier)
 
+#    def currency(self):
+#        return "USD"
+
 
 class Franc(Money):
     def times(self, multiplier):
         return Money(self.amount * multiplier)
+
+#    def currency(self):
+#        return "CHF"
